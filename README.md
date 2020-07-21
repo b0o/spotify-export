@@ -27,8 +27,25 @@ Usage
 $ ./index.js "authorization: Bearer <token>" > spotify-saved-songs.json
 ```
 
+5. You can use [jq](https://github.com/stedolan/jq) to transform the JSON output as desired, e.g:
+
+```
+$ jq -r '.[] | "\(.track.artists | map(.name) | join(", ")) — \(.track.name)"' spotify-saved-songs.json
+Photay — Warmth in the Coldest Acre
+Photay — Existential Celebration
+Photay — Pressure
+Ol' Burger Beats — Bare Horisont - Instrumental
+James Blake — Love What Happened Here
+Eli Keszler — Measurement Doesn’t Change The System At All
+Aphex Twin — Alberto Balsalm
+Robbie Basho — Clair de lune (For Twelve-String) [Live]
+Mount Kimbie, James Blake — How We Got By
+Mount Kimbie — Delta
+...
+```
+
 License
 -------
 &copy; 2020 Maddison Hellstrom
 
-Released under the GPL-3.0 License
+Released under the GNU General Public License, version 3.0 or later.
