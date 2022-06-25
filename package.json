@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/b0o/spotify-export#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "eslint": "^7.1.0",
